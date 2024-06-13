@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Compose Basics</string>
+    <string name="text_composable">Text composable</string>
+    <string name="text_compose_body">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="image_composable">Image composable</string>
+    <string name="image_composable_body">Creates a composable that lays out and draws a given Painter class object.</string>
+</resources>
