@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="profile_icon">Profile image of user</string>
+    <string name="user_name">Jimmy Alele</string>
+    <string name="user_title">Android Developer Extraodinaire</string>
+    <string name="phone_number">+254 (702) 971 638</string>
+    <string name="website_info">\@AndroidDev</string>
+    <string name="email_info">jimmy.alele@android.com</string>
+    <string name="contact_icon">Contact icon</string>
+</resources>
