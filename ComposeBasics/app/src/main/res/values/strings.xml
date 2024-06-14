@@ -4,4 +4,8 @@
     <string name="text_compose_body">Displays text and follows the recommended Material Design guidelines.</string>
     <string name="image_composable">Image composable</string>
     <string name="image_composable_body">Creates a composable that lays out and draws a given Painter class object.</string>
+    <string name="row_composable">Row composable</string>
+    <string name="row_composable_body">A layout composable that places its children in a horizontal sequence.</string>
+    <string name="column_composable">Column composable</string>
+    <string name="column_composable_body">A layout composable that places its children in a vertical sequence.</string>
 </resources>

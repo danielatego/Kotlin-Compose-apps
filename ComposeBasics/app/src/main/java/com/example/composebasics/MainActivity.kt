@@ -7,9 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,65 +29,67 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeBasicsTheme {
-                Column {
-                    Row(
-                        horizontalArrangement = Arrangement.SpaceEvenly
-
-                    ) {
-                        Section(
-                            title = stringResource(R.string.text_composable),
-                            body = stringResource(R.string.text_compose_body),
-                            color = 0xFFEADDFF
-                        )
-                        Section(
-                            title = stringResource(R.string.image_composable),
-                            body = stringResource(R.string.image_composable_body),
-                            color = 0xFFD0BCFF
-                        )
+                Column(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Row(Modifier.weight(1f)) {
+                        Surface (
+                            color = Color(0xFFEADDFF),
+                            modifier=Modifier.weight(1f)
+                        ){
+                            TextColumn(title = stringResource(id = R.string.text_composable),
+                                body = stringResource(id = R.string.text_compose_body) )
+                        }
+                        Surface(
+                            color = Color(0xFFD0BCFF),
+                            modifier = Modifier.weight(1f)
+                        ){
+                            TextColumn(title = stringResource(id = R.string.image_composable),
+                                body = stringResource(id = R.string.image_composable_body) )
+                        }
                     }
-                    Row() {
-                        Section(
-                            title = stringResource(R.string.text_composable),
-                            body = stringResource(R.string.text_compose_body),
-                            color = 0xFFEADDFF
-                        )
-                        Section(
-                            title = stringResource(R.string.image_composable),
-                            body = stringResource(R.string.image_composable_body),
-                            color = 0xFFD0BCFF
-                        )
+                    Row(modifier = Modifier.weight(1f)) {
+                        Surface (
+                            color = Color(0xFFB69DF8),
+                            modifier=Modifier.weight(1f)
+                        ){
+                            TextColumn(title = stringResource(id = R.string.row_composable),
+                                body = stringResource(id = R.string.row_composable_body) )
+                        }
+                        Surface(
+                            color = Color(0xFFF6EDFF),
+                            modifier = Modifier.weight(1f)
+                        ){
+                            TextColumn(title = stringResource(id = R.string.column_composable),
+                                body = stringResource(id = R.string.column_composable_body) )
+                        }
                     }
                 }
+
             }
         }
     }
 }
 
 @Composable
-fun Section(title: String, body: String, color:Long){
-    Surface(
-        color = Color(color)
+fun TextColumn(title:String,body:String){
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxSize()
     ) {
-        Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier
-                .padding(16.dp)
-        ){
-            Text(
-                text = title,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(
-                    bottom = 16.dp
-                )
-            )
-            Text(
-                text = body,
-                textAlign = TextAlign.Justify
-            )
 
-        }
+        Text(
+            text = title,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(16.dp)
+        )
+        Text(
+            text = body,
+            textAlign = TextAlign.Justify,
+            modifier = Modifier.padding(16.dp)
+        )
+
     }
 }
 
@@ -95,34 +97,9 @@ fun Section(title: String, body: String, color:Long){
 @Composable
 fun GreetingPreview() {
     ComposeBasicsTheme {
-        Column (verticalArrangement = Arrangement.SpaceEvenly){
-            Row(
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                Section(
-                    title = stringResource(R.string.text_composable),
-                    body = stringResource(R.string.text_compose_body),
-                    color = 0xFFEADDFF
-                )
-                Section(
-                    title = stringResource(R.string.image_composable),
-                    body = stringResource(R.string.image_composable_body),
-                    color = 0xFFD0BCFF
-                )
-            }
-            Row(horizontalArrangement = Arrangement.SpaceEvenly) {
-                Section(
-                    title = stringResource(R.string.text_composable),
-                    body = stringResource(R.string.text_compose_body),
-                    color = 0xFFB69DF8
-                )
-                Section(
-                    title = stringResource(R.string.image_composable),
-                    body = stringResource(R.string.image_composable_body),
-                    color = 0xFFF6EDFF
-                )
-            }
+
         }
 
-    }
-}
+        }
+
+
