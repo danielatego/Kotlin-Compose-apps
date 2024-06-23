@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="baobab_description">Baobab tree in Taita Taveta in the Kenyan Coast</string>
+    <string name="baobab_by">Toto</string>
+    <string name="baobab_date">2023</string>
+    <string name="library_description">Pictured at the KNLS main library in Kenya</string>
+    <string name="library_by">Ogutu</string>
+    <string name="library_date">2023</string>
+    <string name="barcelona_description">Pictured at the Grey Terrace flats Kahawa Wendani</string>
+    <string name="barcelona_by">Atego</string>
+    <string name="barcelona_date">2023</string>
+    <string name="yellow_description">Pictured at my study in Kahawa Wendani Kenya</string>
+    <string name="yellow_by">Atego</string>
+    <string name="yellow_date">2023</string>
+</resources>
