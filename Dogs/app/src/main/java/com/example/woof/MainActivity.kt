@@ -115,8 +115,8 @@ fun DogItem(
 ) {
     var expanded  by remember { mutableStateOf(false) }
     val color by animateColorAsState(
-        targetValue = if (expanded) MaterialTheme.colorScheme.tertiaryContainer
-        else MaterialTheme.colorScheme.primaryContainer, label = ""
+        targetValue = if (expanded) MaterialTheme.colorScheme.primaryContainer
+        else MaterialTheme.colorScheme.secondaryContainer, label = ""
     )
     Card(modifier = modifier){
         Column(
