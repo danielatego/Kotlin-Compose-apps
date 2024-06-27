@@ -1,4 +1,4 @@
-package com.example.fictionaheroes
+package com.example.fictionalheroes
 
 import org.junit.Test
 
