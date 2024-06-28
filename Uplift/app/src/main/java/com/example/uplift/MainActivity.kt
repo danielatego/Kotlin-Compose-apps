@@ -117,7 +117,7 @@ fun DayItem(
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioLowBouncy,
             stiffness = Spring.StiffnessMedium
-        )
+        ), label = ""
     )
     Surface(onClick = {
         showMessage=!showMessage
