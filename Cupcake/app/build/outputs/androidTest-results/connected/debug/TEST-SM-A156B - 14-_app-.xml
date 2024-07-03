@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.cupcake.test.CupcakeOrderScreenTest" tests="1" failures="0" errors="0" skipped="0" time="3.733" timestamp="2024-07-03T08:11:54" hostname="localhost">
+  <properties>
+    <property name="device" value="SM-A156B - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="selectOptionScreen_verifyContent" classname="com.example.cupcake.test.CupcakeOrderScreenTest" time="2.387" />
+</testsuite>

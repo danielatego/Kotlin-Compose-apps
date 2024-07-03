@@ -1,0 +1,68 @@
+# 2024-07-03T08:11:54.683Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "CupcakeOrderScreenTest"
+    test_package: "com.example.cupcake.test"
+    test_method: "selectOptionScreen_verifyContent"
+    start_time {
+      seconds: 1719994310
+      nanos: 919000000
+    }
+    end_time {
+      seconds: 1719994313
+      nanos: 299000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/daniel/AndroidStudioProjects/Cupcake/app/build/outputs/androidTest-results/connected/debug/SM-A156B - 14/logcat-com.example.cupcake.test.CupcakeOrderScreenTest-selectOptionScreen_verifyContent.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/daniel/AndroidStudioProjects/Cupcake/app/build/outputs/androidTest-results/connected/debug/SM-A156B - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/daniel/AndroidStudioProjects/Cupcake/app/build/outputs/androidTest-results/connected/debug/SM-A156B - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/daniel/AndroidStudioProjects/Cupcake/app/build/outputs/androidTest-results/connected/debug/SM-A156B - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/daniel/AndroidStudioProjects/Cupcake/app/build/outputs/androidTest-results/connected/debug/SM-A156B - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
