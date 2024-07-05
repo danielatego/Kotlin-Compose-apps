@@ -85,15 +85,14 @@ fun SportsApp(
 ) {
     val viewModel: SportsViewModel = viewModel()
     val uiState by viewModel.uiState.collectAsState()
-    val listType:SportsContentType
     val activity = LocalContext.current as Activity
 
-    when(windowSize){
+    val listType:SportsContentType = when(windowSize){
         WindowWidthSizeClass.Compact -> {
-            listType = SportsContentType.ListOnly
+            SportsContentType.ListOnly
         }
         else -> {
-            listType = SportsContentType.ListAndDetail
+            SportsContentType.ListAndDetail
         }
     }
 
