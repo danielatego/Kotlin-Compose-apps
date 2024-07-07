@@ -1,0 +1,250 @@
+<resources>
+    <string name="app_name">My City</string>
+
+    <string name="nairobi_national_park">Nairobi National Park</string>
+    <string name="nairobi_national_park_description">Highlights: Black Rhino Conservation, Big Five
+        Presence,(Read More)Nairobi National Park, located about seven kilometres from downtown
+        Nairobi, is the city\'s most famous attraction.It offers an exciting safari experience,where
+        visitors can see lions, cheetahs, rhinos, hippos, and giraffes roaming in the dense
+        grasslands. What makes it unique is that it's the only national park in the world situated
+        within a capital city.
+
+    </string>
+
+    <string name="giraffe_centre">Giraffe Centre</string>
+    <string name="giraffe_centre_description">The Giraffe Centre in Nairobi is an environmental
+        conservation centre dedicated to protecting the endangered Rothschild\'s giraffe. A visit to
+        the Giraffe Centre not only allows you to get up close and personal with Africa's tallest
+        mammal but also directly supports the conservation efforts for these majestic creatures.
+    </string>
+
+    <string name="national_museum">Nairobi Museum</string>
+    <string name="national_museum_description">The Nairobi National Museum, founded in 1929, is an
+        important place in Kenya where you can learn about the country\'s four pillars - history,
+        culture, and natural heritage. You can explore exhibits and collections that show Kenya's
+        diverse identity, including its long history of human civilization and the amazing wildlife
+        and landscapes found here.
+    </string>
+
+    <string name="karen_blixen_museum">Karen Blixen Museum</string>
+    <string name="karen_blixen_museum_description">The Karen Blixen Museum, located about ten
+        kilometres from downtown Nairobi, was once the home of the famous Danish author Karen Blixen.
+        Opened in 1985 to remember her life and work, the museum displays collections that reflect
+        the time she spent in Kenya, giving visitors insight into her fascinating life and the
+        historical period she lived in.
+    </string>
+
+    <string name="david_sheldrick_wildlife_trust">David Sheldrick Wildlife Trust</string>
+    <string name="david_sheldrick_wildlife_trust_description">The David Sheldrick Wildlife Trust,
+        located in Nairobi National Park, is a well-known nonprofit organisation that rescues and
+        helps elephants, rhinos, and other animals in Kenya. They take care of orphaned baby
+        elephants that have been hurt by poaching, drought, or conflicts with people. Visitors can
+        watch these baby elephants being fed, cleaned, and playing in mud baths.
+    </string>
+
+    <string name="bomas_of_kenya">Bomas of Kenya</string>
+    <string name="bomas_of_kenya_description">Bomas of Kenya is a tourist village tour in Nairobi,
+        offering a glimpse into the traditional villages of Kenya\'s tribes. Through exhibits,
+        visitors learn about each tribe's way of life, including their social structure, music, and
+        dance, providing an enriching cultural experience.
+    </string>
+
+    <string name="village_market">Village Market</string>
+    <string name="village_market_description">Nairobi Village Market is the largest entertainment
+        and shopping outlet in East Africa, located in the Gigiri residential area. It is designed
+        to resemble an African market in the open, with waterfalls, rivers, plants and gardens
+        dotting the complex.
+
+    </string><string name="railway_museum">Railway Museum</string>
+    <string name="railway_museum_description">Built in 1971, the world-famous Nairobi Railway Museum
+        is a spectacular landmark promising to protect and showcase the precious antique records of
+        the railways of East Africa. The museum has many galleries displaying the age-old
+        collections of local trains.
+
+    </string><string name="maasai_market">Maasai Market</string>
+    <string name="maasai_market_description">Widely popular and extremely recommended by every local
+        , Masaai market is a must-visit for handicraft shoppers. This is a vibrant open-air market
+        in multiple locations in Nairobi where visitors can shop for authentic African crafts,
+        jewellery, and souvenirs. From historic African paintings to amazing handicrafts, this
+        endless market is all the more attractive because of its cheap rates.
+
+    </string>
+
+    <string name="karura_forest">Karura Forest</string>
+    <string name="karura_forest_description">The urban gazetted Karura forest is located in Nairobi,
+        Kenya, and is abundant with natural beauty and resources. It is divided into three parts by
+        Limuru and Kiambu roads. The forest has a natural trail running up to 50 km that facilitates
+        visitors to walk, run, and bike around the forest. One can also rent a trail bike.
+    </string>
+
+    <string name="uhuru_gardens_memorial">Uhuru Gardens</string>
+    <string name="uhuru_gardens_memorial_description">Uhuru Gardens is Kenya\'s largest urban
+        commemorative and memorial park, located along Langata Road, Nairobi. It was established to
+        celebrate the country’s independence from the British Empire in 1963 and was declared a
+        National Monument in 1966. It houses three historically significant monuments that draw the
+        attention of tourists
+    </string>
+
+    <string name="two_rivers_mall">The Two Rivers Mall</string>
+    <string name="two_rivers_mall_description">The Two Rivers Mall is the largest shopping centre in
+        Sub-Saharan Africa, located on Limuru Road in Ruaka, Nairobi. It houses over 20 local and
+        international brands and 200 stores. The dancing fountains here are spectacular, especially
+        when lit up at night. Africa’s tallest Ferris wheel, the Eye of Kenya, is also located here.
+
+    </string><string name="the_hub_karen">The Hub Karen</string>
+    <string name="the_hub_karen_description">The Hub Karen is a massive mall and entertainment
+        centre in the Karen suburb of Nairobi. It has more than 85 stores selling clothing, footwear,
+        accessories, pet products, toys, sports goods, electronics, beauty and skincare products,
+        homeware items, etc. Fun activities like ziplining and airbag jumping are available here too.
+    </string>
+    <string name="snake_park">Snake Park</string>
+    <string name="snake_park_description">Situated near Nairobi National Museum, the Snake Park
+        showcases a variety of Kenyan snake species and other reptiles. Visitors can learn about
+        these creatures through guided tours. The park is accessible by road, and a visit here
+        typically takes 1-2 hours.
+    </string>
+
+    <string name="kenyatta_international_conference">Kenyatta International Conference
+    Centre</string>
+    <string name="kenyatta_international_conference_description">Kenyatta International Conference
+        Centre, situated in the heart of Nairobi, is a renowned landmark is best known for holding
+        official gatherings, meetings and conferences. Visitors can marvel at its impressive
+        architecture and panoramic views from the rooftop helipad, accessible during business hours.
+    </string>
+
+    <string name="african_heritage_house">African Heritage House</string>
+    <string name="african_heritage_house_description">A National Monument and museum, the African
+        Heritage House is situated in front of the Nairobi National Park in Mlolongo. Within the
+        house are artefacts, artworks, jewellery, textiles, traditional pottery, weapons, antiques,
+        ceremonial clothes and more. It is open for tours, lunches or dinners and overnight stays.
+    </string>
+
+    <string name="arboretum">Nairobi Arboretum</string>
+    <string name="arboretum_description">Nairobi Arboretum is 30.4 acres of a wooded paradise home
+        to over 350 species of indigenous and exotic plant life and over 100 species of birds. It is
+        located along the State House Road in Kilimani. It has shaded trails for walkways, picnic
+        lawns and jogging trails. Sykes and Vervet monkeys can also be spotted here.
+    </string>
+
+    <string name="ngong_road_forest_sanctuary">Ngong Road Forest Sanctuary</string>
+    <string name="ngong_road_forest_sanctuary_description">Ngong Road Forest Sanctuary is a managed
+        forest on the outskirts of Nairobi in Jamhuri. It is a popular place to explore the flora of
+        Kenya and go for a quick run or walk Bushbucks, civets, porcupines, pythons, green snakes,
+        puddle frogs, and many more animals can be spotted here. Roughly 113 bird species exist
+        within the forest, including African Harrier Hawk and Narina trogons.
+    </string>
+
+    <string name="nairobi_central_park">The Central Park of Nairobi</string>
+    <string name="nairobi_central_park_description">The Central Park of Nairobi is a public park
+        situated behind Nairobi Serena Hotel and adjacent to the famous Uhuru Park. Nyayo monument,
+        dedicated to Kenya’s second president, Daniel Toroitich Arap Moi, is a major landmark within
+        the park for tourists and photographers. It is also a popular picnic spot and boasts a
+        children’s playground.
+    </string>
+
+    <string name="go_kart">GP Karting</string>
+    <string name="go_kart_description">Outside Nairobi town, we arrived at GP Karting. Our clients
+        were taught on how to drive the Karts, given the first lap to first master how to manuever
+        through the corners while karting, then after left to race together.
+        The staff was so welcoming, and we hope to be back there soon!
+    </string>
+
+    <string name="mercardo_restaurant">Mercardo Restaurant</string>
+    <string name="mercardo_restaurant_description">Exquisitely presented and beautifully balanced,
+        the menu at Mercado is fun, flavorful and simply fantastic. The rustic environment with
+        wooden swing seating, bold colors and lit market baskets create the perfect atmosphere to
+        entertain. The terrace overlooking the city is famous for its sundowners and happy hours
+        with the award-winning cocktail menu.
+    </string>
+
+    <string name="animal_orphanage">Animal Orphanage</string>
+    <string name="animal_orphanage_description">Nairobi Animal Orphanage is a wildlife
+        rehabilitation centre in Nairobi National Park. It is the oldest of its kind in Kenya.
+        Hyenas, leopards and scarce Sokoke cats are some wildlife that can be found here. Various
+        birds can also be viewed, including parrots, guinea fowls, crowned cranes and ostriches.
+    </string>
+
+    <string name="ngong_hills">Ngong Hills</string>
+    <string name="ngong_hills_description">Ngong Hills, near Nairobi, Kenya, are a famous set of
+        peaks known for their stunning views and cultural significance. Rising sharply from the
+        plains, these hills became well-known through Karen Blixen's book and movie "Out of Africa."
+        Standing at around 2,460 meters tall, they offer amazing views of the Rift Valley and
+        Nairobi
+    </string>
+
+    <string name="nairobi_gallery">Nairobi Gallery</string>
+    <string name="nairobi_gallery_description">Situated on Kenyatta Avenue in Nairobi, the Nairobi
+        Gallery is a museum showcasing African art. It is housed within a National Monument
+        established in the early 20th century on the site of the old Provisional Commissioner's
+        office. It is also the site of Point Zero, from which all distances used to be measured in
+        Israel.
+    </string>
+
+    <string name="lavington_mall">Lavington Mall</string>
+    <string name="lavington_mall_description">Lavington Mall is one of the largest shopping malls
+        in Nairobi, located along the James Gichuru Road within the Lavington Green shopping area.
+        It is the ideal destination for shopping, dining and other fun activities. It is filled with
+        quaint bakeries and diners, pocket friendly apparel stores and pampering skin and haircare
+        locations.
+    </string>
+
+    <string name="uhuru_park">Uhuru Park</string>
+    <string name="uhuru_park_description">Uhuru Park is a 13-hectare residential park located on
+        Uhuru Highway, across from Nairobi InterContinental Hotel. It is equipped with an artificial
+        lake, a fountain and an assembly ground perfect for skateboarding. It also houses the Nyayo
+        monument and offers great views of the city’s skyline. Boating, horse and camel riding, and
+        remote control mobile cars are popular activities here.
+    </string>
+
+    <string name="oloolua_nature_trail">Oloolua Nature Trail</string>
+    <string name="oloolua_nature_trail_description">The Oloolua Nature Trail is a 5km natural trail
+        in the tropical Oloolua Forest of the Karen neighbourhood. The trail is popular for jogging,
+        walking, picnicking amidst stunning forest views, and hiking. Many indigenous trees and
+        plants can be found here. A 20-foot waterfall at the forest entrance is the highlight, along
+        with a campsite equipped with bonfire facilities.
+    </string>
+
+    <string name="fair_view">Fair View</string>
+    <string name="fair_view_description">The secret of Nairobi\'s Upper Hill, that is the Fairview
+        Hotel. It\'s the tranquillity created by our lush gardens, tapestry of pathways and those
+        little surprises around each corner that travelers tell us makes them fall in love with the
+        Fairview Hotel. Our hotel offers a wide range of different bedrooms; from rooms within the
+        gardens to Manor House suites, a choice that enables travelers to return to the Fairview
+        whenever leisure or business brings them back to Nairobi.
+        Karibu! - Welcome
+    </string>
+
+    <string name="villa_rossa_kempinski">Villa Rossa Kempinski</string>
+    <string name="villa_rossa_kempinski_description">Looking for a place to stay in Nairobi? Then
+        look no further than Villa Rosa Kempinski Nairobi, a family-friendly hotel that brings the
+        best of Nairobi to your doorstep. Guest rooms offer a flat screen TV, air conditioning, and
+        a minibar, and Villa Rosa Kempinski Nairobi makes getting online easy as free wifi is
+        available. You can also take advantage of some of the amenities offered by the hotel,
+        including a rooftop terrace, a concierge, and room service. In addition, guests can enjoy a
+        pool and free breakfast during their visit.
+    </string>
+
+    <string name="cjs">CJs</string>
+    <string name="cjs_description">CJ’s, a fully fledged restaurant specializing in delivering a
+        relaxed and memorable dining experience. Each location features a unique ambience with
+        tasteful decor, specially designed for your comfort. To make you feel more at home, we’ve
+        carefully selected a unique theme for each location.
+    </string>
+
+    <string name="radisson_blue">Radisson Blu Hotel</string>
+    <string name="radisson_blue_description">Located just 20 minutes\' drive from both Nairobi
+        National Park and the airport, the Radisson Blu Hotel - a five star hotel - in the heart of
+        the fast-growing business district of Upper Hill is the perfect base for a Business Trip or
+        Kenyan Safari. Our 271 luxurious rooms and suites come complete with free Wi-Fi, a minibar,
+        along with lovely city or park views, offering you the best value for money.
+    </string>
+
+    <string name="nairobi_default">Nairobi City</string>
+    <string name="nairobi_default_description">Nairobi is Kenya’s capital city. In addition to its
+        urban core, the city has Nairobi National Park, a large game reserve known for breeding
+        endangered black rhinos and home to giraffes, zebras and lions. Next to it is a
+        well-regarded elephant orphanage operated by the David Sheldrick Wildlife Trust. Nairobi is
+        also often used as a jumping-off point for safari trips elsewhere in Kenya.
+    </string>
+
+</resources>
