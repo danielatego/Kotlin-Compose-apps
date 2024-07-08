@@ -6,7 +6,7 @@
         Presence,(Read More)Nairobi National Park, located about seven kilometres from downtown
         Nairobi, is the city\'s most famous attraction.It offers an exciting safari experience,where
         visitors can see lions, cheetahs, rhinos, hippos, and giraffes roaming in the dense
-        grasslands. What makes it unique is that it's the only national park in the world situated
+        grasslands. What makes it unique is that it\'s the only national park in the world situated
         within a capital city.
 
     </string>
@@ -14,14 +14,14 @@
     <string name="giraffe_centre">Giraffe Centre</string>
     <string name="giraffe_centre_description">The Giraffe Centre in Nairobi is an environmental
         conservation centre dedicated to protecting the endangered Rothschild\'s giraffe. A visit to
-        the Giraffe Centre not only allows you to get up close and personal with Africa's tallest
+        the Giraffe Centre not only allows you to get up close and personal with Africa\'s tallest
         mammal but also directly supports the conservation efforts for these majestic creatures.
     </string>
 
     <string name="national_museum">Nairobi Museum</string>
     <string name="national_museum_description">The Nairobi National Museum, founded in 1929, is an
         important place in Kenya where you can learn about the country\'s four pillars - history,
-        culture, and natural heritage. You can explore exhibits and collections that show Kenya's
+        culture, and natural heritage. You can explore exhibits and collections that show Kenya\'s
         diverse identity, including its long history of human civilization and the amazing wildlife
         and landscapes found here.
     </string>
@@ -45,7 +45,7 @@
     <string name="bomas_of_kenya">Bomas of Kenya</string>
     <string name="bomas_of_kenya_description">Bomas of Kenya is a tourist village tour in Nairobi,
         offering a glimpse into the traditional villages of Kenya\'s tribes. Through exhibits,
-        visitors learn about each tribe's way of life, including their social structure, music, and
+        visitors learn about each tribe\'s way of life, including their social structure, music, and
         dance, providing an enriching cultural experience.
     </string>
 
@@ -80,7 +80,7 @@
     <string name="uhuru_gardens_memorial">Uhuru Gardens</string>
     <string name="uhuru_gardens_memorial_description">Uhuru Gardens is Kenya\'s largest urban
         commemorative and memorial park, located along Langata Road, Nairobi. It was established to
-        celebrate the country’s independence from the British Empire in 1963 and was declared a
+        celebrate the country\’s independence from the British Empire in 1963 and was declared a
         National Monument in 1966. It houses three historically significant monuments that draw the
         attention of tourists
     </string>
@@ -89,7 +89,7 @@
     <string name="two_rivers_mall_description">The Two Rivers Mall is the largest shopping centre in
         Sub-Saharan Africa, located on Limuru Road in Ruaka, Nairobi. It houses over 20 local and
         international brands and 200 stores. The dancing fountains here are spectacular, especially
-        when lit up at night. Africa’s tallest Ferris wheel, the Eye of Kenya, is also located here.
+        when lit up at night. Africa\’s tallest Ferris wheel, the Eye of Kenya, is also located here.
 
     </string><string name="the_hub_karen">The Hub Karen</string>
     <string name="the_hub_karen_description">The Hub Karen is a massive mall and entertainment
@@ -137,14 +137,14 @@
     <string name="nairobi_central_park">The Central Park of Nairobi</string>
     <string name="nairobi_central_park_description">The Central Park of Nairobi is a public park
         situated behind Nairobi Serena Hotel and adjacent to the famous Uhuru Park. Nyayo monument,
-        dedicated to Kenya’s second president, Daniel Toroitich Arap Moi, is a major landmark within
+        dedicated to Kenya\’s second president, Daniel Toroitich Arap Moi, is a major landmark within
         the park for tourists and photographers. It is also a popular picnic spot and boasts a
-        children’s playground.
+        children\’s playground.
     </string>
 
     <string name="go_kart">GP Karting</string>
     <string name="go_kart_description">Outside Nairobi town, we arrived at GP Karting. Our clients
-        were taught on how to drive the Karts, given the first lap to first master how to manuever
+        were taught on how to drive the Karts, given the first lap to first master how to maneuver
         through the corners while karting, then after left to race together.
         The staff was so welcoming, and we hope to be back there soon!
     </string>
@@ -167,7 +167,7 @@
     <string name="ngong_hills">Ngong Hills</string>
     <string name="ngong_hills_description">Ngong Hills, near Nairobi, Kenya, are a famous set of
         peaks known for their stunning views and cultural significance. Rising sharply from the
-        plains, these hills became well-known through Karen Blixen's book and movie "Out of Africa."
+        plains, these hills became well-known through Karen Blixen\'s book and movie "Out of Africa."
         Standing at around 2,460 meters tall, they offer amazing views of the Rift Valley and
         Nairobi
     </string>
@@ -175,7 +175,7 @@
     <string name="nairobi_gallery">Nairobi Gallery</string>
     <string name="nairobi_gallery_description">Situated on Kenyatta Avenue in Nairobi, the Nairobi
         Gallery is a museum showcasing African art. It is housed within a National Monument
-        established in the early 20th century on the site of the old Provisional Commissioner's
+        established in the early 20th century on the site of the old Provisional Commissioner\'s
         office. It is also the site of Point Zero, from which all distances used to be measured in
         Israel.
     </string>
@@ -192,7 +192,7 @@
     <string name="uhuru_park_description">Uhuru Park is a 13-hectare residential park located on
         Uhuru Highway, across from Nairobi InterContinental Hotel. It is equipped with an artificial
         lake, a fountain and an assembly ground perfect for skateboarding. It also houses the Nyayo
-        monument and offers great views of the city’s skyline. Boating, horse and camel riding, and
+        monument and offers great views of the city/’s skyline. Boating, horse and camel riding, and
         remote control mobile cars are popular activities here.
     </string>
 
@@ -225,9 +225,9 @@
     </string>
 
     <string name="cjs">CJs</string>
-    <string name="cjs_description">CJ’s, a fully fledged restaurant specializing in delivering a
+    <string name="cjs_description">CJ\’s, a fully fledged restaurant specializing in delivering a
         relaxed and memorable dining experience. Each location features a unique ambience with
-        tasteful decor, specially designed for your comfort. To make you feel more at home, we’ve
+        tasteful decor, specially designed for your comfort. To make you feel more at home, we\’ve
         carefully selected a unique theme for each location.
     </string>
 
@@ -240,11 +240,12 @@
     </string>
 
     <string name="nairobi_default">Nairobi City</string>
-    <string name="nairobi_default_description">Nairobi is Kenya’s capital city. In addition to its
+    <string name="nairobi_default_description">Nairobi is Kenya\’s capital city. In addition to its
         urban core, the city has Nairobi National Park, a large game reserve known for breeding
         endangered black rhinos and home to giraffes, zebras and lions. Next to it is a
         well-regarded elephant orphanage operated by the David Sheldrick Wildlife Trust. Nairobi is
         also often used as a jumping-off point for safari trips elsewhere in Kenya.
     </string>
+    <string name="back">back</string>
 
 </resources>

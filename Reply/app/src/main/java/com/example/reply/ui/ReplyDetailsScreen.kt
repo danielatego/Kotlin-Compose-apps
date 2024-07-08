@@ -114,7 +114,8 @@ private fun ReplyDetailsScreenTopBar(
             onClick = onBackButtonClicked,
             modifier = Modifier
                 .padding(horizontal = dimensionResource(R.dimen.detail_topbar_back_button_padding_horizontal))
-                .background(MaterialTheme.colorScheme.surface, shape = CircleShape),
+                .background(MaterialTheme.colorScheme.surface, shape = CircleShape)
+                ,
         ) {
             Icon(
                 imageVector = Icons.Filled.ArrowBack,
