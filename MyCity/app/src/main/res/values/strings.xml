@@ -247,5 +247,10 @@
         also often used as a jumping-off point for safari trips elsewhere in Kenya.
     </string>
     <string name="back">back</string>
+    <string name="accomodation">Accomodation</string>
+    <string name="wildlife">Wildlife\t\t</string>
+    <string name="recreation">Recreation</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="culture">Culture</string>
 
 </resources>

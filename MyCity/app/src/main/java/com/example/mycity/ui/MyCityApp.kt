@@ -37,7 +37,13 @@ fun MyCityApp(
             contentType = MyCityContentType.LIST_ONLY
         }
     }
-    MyCityDestinationsListAndDetailContent(myCityUiState = myCityUiState, onDestinationPressed = {
-        viewModel.showDestinationDetailsScreen(destination = it)
-    })
+        MyCityHomeApp(
+            myCityUiState = myCityUiState,
+            onDestinationPressed = {viewModel.showDestinationDetailsScreen(it)},
+            contentType = contentType,
+            navigationType = navigationType,
+            selectedDestinationCategory = myCityUiState.currentCityCategory,
+            onBackPressed = {viewModel.backToListView()},
+            onTabPressed ={viewModel.changeDestinationCategory(it)}
+        )
 }

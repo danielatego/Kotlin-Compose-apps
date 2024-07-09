@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
@@ -52,7 +53,7 @@ import com.example.mycity.ui.theme.MyCityTheme
 @Composable
 fun MyCityDestinationListItem(
     destination: Destination,
-    onCardTap: () -> Unit,
+    onCardTap: (Destination) -> Unit,
     isSelected: Boolean,
     modifier: Modifier =Modifier
 ){
@@ -65,7 +66,7 @@ fun MyCityDestinationListItem(
                     MaterialTheme.colorScheme.secondaryContainer
 
         ),
-        onClick = onCardTap
+        onClick = {onCardTap(destination)}
 
     ) {
         Row (modifier = Modifier
@@ -119,7 +120,7 @@ fun MyCityDestinationsListOnly(
 ){
     val destinations = myCityUiState.currentCityCategoryDestinations
     LazyColumn(
-        modifier = modifier,
+        modifier = modifier.padding(horizontal = dimensionResource(R.dimen.medium_padding)),
         contentPadding = WindowInsets.safeDrawing.asPaddingValues(),
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.small_padding))
     ) {
@@ -139,7 +140,8 @@ fun MyCityDestinationsListOnly(
 fun MyCityDestinationsListAndDetailContent(
     myCityUiState: MyCityUiState,
     onDestinationPressed: (Destination) -> Unit,
-    modifier:Modifier = Modifier
+    modifier:Modifier = Modifier,
+    displayUpButton:Boolean =false
 ){
     Row (
         modifier = modifier,
@@ -154,7 +156,8 @@ fun MyCityDestinationsListAndDetailContent(
         MyCityDestinationDescription(
             destination = myCityUiState.currentSelectedDestination,
             onBackPressed = {activity.finish()},
-            modifier = Modifier.weight(5f)
+            modifier = Modifier.weight(5f),
+            displayUpButton = displayUpButton
         )
     }
 }
@@ -164,7 +167,8 @@ fun MyCityDestinationsListAndDetailContent(
 fun MyCityDestinationDescription(
     destination: Destination,
     modifier: Modifier = Modifier,
-    onBackPressed: () -> Unit
+    onBackPressed: () -> Unit,
+    displayUpButton: Boolean =true
 ){
     BackHandler {
         onBackPressed()
@@ -180,21 +184,27 @@ fun MyCityDestinationDescription(
                 Box (
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(dimensionResource(R.dimen.medium_padding)),
+                        .height(72.dp)
+                        .padding(horizontal = dimensionResource(R.dimen.medium_padding)),
                     contentAlignment = Alignment.Center
                 ){
-                    Box (modifier = Modifier.fillMaxWidth(),contentAlignment = Alignment.TopStart){
-                        IconButton(
-                            onClick = onBackPressed,
-                            modifier = Modifier.background(
-                                MaterialTheme.colorScheme.surface,
-                                CircleShape
-                            )
+                    if(displayUpButton) {
+                        Box(
+                            modifier = Modifier.fillMaxWidth(),
+                            contentAlignment = Alignment.TopStart
                         ) {
-                            Icon(
-                                imageVector = Icons.Filled.ArrowBack,
-                                contentDescription = stringResource(R.string.back)
-                            )
+                            IconButton(
+                                onClick = onBackPressed,
+                                modifier = Modifier.background(
+                                    MaterialTheme.colorScheme.surface,
+                                    CircleShape
+                                )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Filled.ArrowBack,
+                                    contentDescription = stringResource(R.string.back)
+                                )
+                            }
                         }
                     }
                     Text(text = stringResource(destination.name),
@@ -205,7 +215,7 @@ fun MyCityDestinationDescription(
                 }
 
                 Card(
-                    modifier=Modifier.padding(dimensionResource(R.dimen.medium_padding)),
+                    modifier=Modifier.padding(horizontal= dimensionResource(R.dimen.medium_padding)),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
                 ) {
                     Column(
@@ -284,9 +294,9 @@ fun MyCityHomePageTopBarPreview(){
 @Composable
 fun MyCityDestinationDescriptionPreview(){
     MyCityTheme {
-        MyCityDestinationDescription(destination = LocalDestinationsProvider.defaultDestination) {
-
-        }
+        MyCityDestinationDescription(
+            onBackPressed = {},
+            destination = LocalDestinationsProvider.defaultDestination)
 }}
 
 

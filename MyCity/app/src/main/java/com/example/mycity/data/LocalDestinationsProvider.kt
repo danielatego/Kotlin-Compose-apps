@@ -139,7 +139,7 @@ object LocalDestinationsProvider {
         ),
         Destination(
             name = R.string.village_market,
-            category = DestinationCategory.Accommodation,
+            category = DestinationCategory.Restaurants,
             description = R.string.village_market_description,
             destinationPicture = R.drawable.village_market,
         ),
@@ -151,7 +151,7 @@ object LocalDestinationsProvider {
         ),
         Destination(
             name = R.string.mercardo_restaurant,
-            category = DestinationCategory.Accommodation,
+            category = DestinationCategory.Restaurants,
             description = R.string.mercardo_restaurant_description,
             destinationPicture = R.drawable.mercardo_restaurant,
         ),
@@ -161,54 +161,7 @@ object LocalDestinationsProvider {
             description = R.string.fair_view_description,
             destinationPicture = R.drawable.fairview_hotel,
         ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
-        Destination(
-            name = R.string.african_heritage_house,
-            category = DestinationCategory.Culture,
-            description = R.string.african_heritage_house_description,
-            destinationPicture = R.drawable.african_heritage_house,
-        ),
+
         Destination(
             name=R.string.radisson_blue,
             category = DestinationCategory.Accommodation,

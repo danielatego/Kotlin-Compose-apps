@@ -3,4 +3,5 @@
     <dimen name="medium_padding">16dp</dimen>
     <dimen name="small_padding">8dp</dimen>
     <dimen name="large_padding">20dp</dimen>
+    <dimen name="permanent_drawer_width">240dp</dimen>
 </resources>
