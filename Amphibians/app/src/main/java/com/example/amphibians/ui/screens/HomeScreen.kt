@@ -12,6 +12,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -60,12 +63,14 @@ fun AmphibiansList(
     modifier: Modifier,
     amphibianListData:List<AmphibianData>
 ){
-    LazyColumn(
+    LazyVerticalGrid(
+        columns= GridCells.Adaptive(300.dp),
         contentPadding = PaddingValues(horizontal = dimensionResource(R.dimen.padding_medium)),
         modifier = modifier
             .padding(contentPadding)
             .fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
     ) {
         items(items = amphibianListData, key = {amphibianData -> amphibianData.name}){
             amphibianData -> AmphibianImageCard(amphibianData = amphibianData)
@@ -74,8 +79,8 @@ fun AmphibiansList(
 }
 @Composable
 fun AmphibianImageCard(
-    paddingValues: PaddingValues = PaddingValues(0.dp),
     modifier: Modifier = Modifier,
+    paddingValues: PaddingValues = PaddingValues(0.dp),
     amphibianData: AmphibianData
 ){
     Card(
