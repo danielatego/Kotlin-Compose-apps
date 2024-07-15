@@ -2,6 +2,7 @@ package com.example.amphibians.network
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.descriptors.StructureKind
 
 @Serializable
 data class AmphibianData (
