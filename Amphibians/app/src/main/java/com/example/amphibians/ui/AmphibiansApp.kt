@@ -15,7 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.amphibians.R
+import com.example.amphibians.ui.screens.AmphibiansViewModel
 import com.example.amphibians.ui.screens.HomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -28,7 +30,10 @@ fun AmphibiansApp(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {AmphibiansTopAppBar(scrollBehavior)}
     ) {
+        val amphibiansViewModel: AmphibiansViewModel = viewModel(factory = AmphibiansViewModel.Factory)
         HomeScreen(
+            amphibianUiState = amphibiansViewModel.amphibianUiState,
+            retryAction = amphibiansViewModel::getAmphibiansDataList,
             contentPadding = it
         )
     }

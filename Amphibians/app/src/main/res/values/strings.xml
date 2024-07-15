@@ -9,5 +9,7 @@
         which are wedged to aid in digging. They are typically grey, green,
         or brown with dark spots
     </string>
-
+    <string name="test_amphibian_src">https://developer.android.com/codelabs/basic-android-kotlin-compose-amphibians-app/img/great-basin-spadefoot.png</string>
+    <string name="internet_connection_error">Internet connection error</string>
+    <string name="retry">Retry</string>
 </resources>
