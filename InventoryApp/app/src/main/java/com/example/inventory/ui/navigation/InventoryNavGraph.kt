@@ -16,6 +16,7 @@
 
 package com.example.inventory.ui.navigation
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -63,8 +64,9 @@ fun InventoryNavHost(
             route = ItemDetailsDestination.routeWithArgs,
             arguments = listOf(navArgument(ItemDetailsDestination.itemIdArg) {
                 type = NavType.IntType
-            })
+            }),
         ) {
+
             ItemDetailsScreen(
                 navigateToEditItem = { navController.navigate("${ItemEditDestination.route}/$it") },
                 navigateBack = { navController.navigateUp() }

@@ -52,7 +52,7 @@ fun ItemEditScreen(
     modifier: Modifier = Modifier,
     viewModel: ItemEditViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
-    val coroutinScope = rememberCoroutineScope()
+    val coroutineScope = rememberCoroutineScope()
     Scaffold(
         topBar = {
             InventoryTopAppBar(
@@ -67,7 +67,7 @@ fun ItemEditScreen(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
             onSaveClick = {
-                          coroutinScope.launch {
+                          coroutineScope.launch {
                               viewModel.updateItem()
                               navigateBack()
                           }
