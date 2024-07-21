@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flight Search</string>
+    <string name="search_icon">Search</string>
+    <string name="voice_icon">Voice input</string>
+    <string name="favourite_icon">Favourite</string>
+    <string name="depart">DEPART</string>
+    <string name="arrive">ARRIVE</string>
+</resources>
