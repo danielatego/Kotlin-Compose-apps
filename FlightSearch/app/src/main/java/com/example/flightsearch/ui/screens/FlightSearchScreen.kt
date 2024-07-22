@@ -1,4 +1,4 @@
-package com.example.flightsearch.ui.Screens
+package com.example.flightsearch.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -33,7 +34,8 @@ import com.example.flightsearch.R
 
 @Composable
 fun FlightSearchScreen(
-    modifier: Modifier=Modifier
+    modifier: Modifier=Modifier,
+    suggestionLists: List<SearchSuggestions>
 ) {
     Column(modifier = modifier.padding(dimensionResource(R.dimen.padding_medium))) {
         TextField()
@@ -44,7 +46,7 @@ fun FlightSearchScreen(
                 style = MaterialTheme.typography.titleMedium
             )
 
-            ListOfFlights()
+            ListOfSuggestions(searchSuggestionsList = suggestionLists)
         }
     }
 
@@ -99,6 +101,8 @@ fun TextFieldIcons(
 
 @Composable
 fun SearchSuggestionItem(
+    iataCode: String,
+    airport: String,
     modifier: Modifier =Modifier,
     suggestionOnClick:()-> Unit
 ){
@@ -112,13 +116,13 @@ fun SearchSuggestionItem(
                 .padding(vertical = dimensionResource(R.dimen.padding_very_small))
         ) {
             Text(
-                text = "NBO",
+                text = iataCode,
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(end = dimensionResource(R.dimen.small_padding))
             )
             Text(
-                text = "Nairobi International Airport",
+                text = airport,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onBackground,
             )
@@ -206,13 +210,14 @@ fun SearchResultTextColumn(
 }
 
 @Composable
-fun ListOfSuggestions(){
-
+fun ListOfSuggestions(
+    searchSuggestionsList: List<SearchSuggestions>
+){
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_very_small))
     ) {
-       items(count =20){
-           SearchSuggestionItem(suggestionOnClick = {})
+       items(items = searchSuggestionsList, key = {suggestion -> suggestion.iataCode}){
+           SearchSuggestionItem(iataCode = it.iataCode, airport = it.airportName, suggestionOnClick = {})
        }
     }
 }

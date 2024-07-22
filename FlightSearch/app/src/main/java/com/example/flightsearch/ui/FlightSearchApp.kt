@@ -8,10 +8,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flightsearch.R
-import com.example.flightsearch.ui.Screens.FlightSearchScreen
+import com.example.flightsearch.ui.screens.FlightSearchScreen
+import com.example.flightsearch.ui.screens.FlightSearchViewModel
 
 @Composable
 fun FlightSearchApp(
@@ -22,7 +26,9 @@ fun FlightSearchApp(
             TopAppBar()
         }
     ) {
-        FlightSearchScreen(modifier = Modifier.padding(it))
+        val flightSearchViewModel:FlightSearchViewModel = viewModel(factory = FlightSearchViewModel.Factory)
+        val flightSearchState =flightSearchViewModel.getListSearchSuggestions("op").collectAsState().value
+        FlightSearchScreen(modifier = Modifier.padding(it), suggestionLists = flightSearchState)
     }
 }
 
