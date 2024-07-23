@@ -3,7 +3,6 @@ package com.example.flightsearch.ui.screens
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
@@ -12,13 +11,13 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.room.ColumnInfo
 import com.example.flightsearch.FlightSearchApplication
-import com.example.flightsearch.data.Airport
 import com.example.flightsearch.data.Favorite
 import com.example.flightsearch.data.FlightsRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 sealed interface FlightSearchUiState {
     data class Favourites(val favourites: List<FlightTrip>): FlightSearchUiState
@@ -72,6 +71,29 @@ class FlightSearchViewModel(
             initialValue = FlightSearchUiState.SearchResults(listOf())
         )
     }
+    fun getListOfFavoriteDestinations() {
+
+            viewModelScope.launch {
+               flightSearchUiState= flightsRepository.getAllFavourites().map {
+                    FlightSearchUiState.Favourites(
+                        it
+                            .map {
+                                FlightTrip(
+                                    departIata = it.departure_code,
+                                    departName = flightsRepository.getAirportName(it.departure_code).name,
+                                    arriveIata = it.destination_code,
+                                    arriveName = flightsRepository.getAirportName(it.destination_code).name
+                                )
+                            }
+                    )
+                }.stateIn(
+                    scope = viewModelScope,
+                    started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
+                    initialValue = FlightSearchUiState.Favourites(listOf())
+                )
+            }
+
+    }
 
     suspend fun addFavorite(favorite: Favorite){
         flightsRepository.addFavourite(favorite)
@@ -80,7 +102,11 @@ class FlightSearchViewModel(
 
     fun updateSearchUiState(entry: SearchUiState){
         searchUiState = entry
-        flightSearchUiState = getListSearchSuggestions(searchUiState.editTextEntry)
+        if (entry.editTextEntry.isNotBlank()) {
+            flightSearchUiState = getListSearchSuggestions(searchUiState.editTextEntry)
+        }else{
+            getListOfFavoriteDestinations()
+        }
     }
     fun updateUiStateToShowFlights(entry: String,airportName: String){
         searchUiState = searchUiState.copy(editTextEntry=entry, airportName = airportName)

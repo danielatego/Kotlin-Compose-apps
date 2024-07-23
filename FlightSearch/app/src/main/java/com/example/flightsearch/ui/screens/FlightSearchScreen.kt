@@ -55,7 +55,10 @@ fun FlightSearchScreen(
                     searchSuggestionsList = flightSearchUiState.suggestions,
                     suggestionOnClick =onSuggestionSelection)
                 is FlightSearchUiState.SearchResults -> ListOfFlights(listOfFlights = flightSearchUiState.SearchList,addFavorite=addFavorite)
-                is FlightSearchUiState.Favourites -> null
+                is FlightSearchUiState.Favourites -> ListOfFlights(
+                    listOfFlights = flightSearchUiState.favourites,
+                    addFavorite = {}
+                )
             }
 
         }

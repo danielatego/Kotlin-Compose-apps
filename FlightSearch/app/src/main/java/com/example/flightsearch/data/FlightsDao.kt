@@ -34,7 +34,7 @@ interface FlightsDao {
             " LIMIT 1")
     fun getAirportName(iata: String): Airport
 
-    @Query("SELECT * FROM favorite ")
+    @Query("SELECT * FROM favorite")
     fun getAllFavourites(): Flow<List<Favorite>>
 
     @Delete(entity = Favorite::class)
