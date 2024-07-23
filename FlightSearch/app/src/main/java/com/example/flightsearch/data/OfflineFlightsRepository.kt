@@ -22,7 +22,7 @@ class OfflineFlightsRepository(private val flightsDao: FlightsDao): FlightsRepos
     }
 
     override fun getFlights(iata: String): Flow<List<Airport>> {
-       return getFlights(iata)
+       return flightsDao.getFlights(iata)
     }
 
     override suspend fun removeFavorite(favorite: Favorite) {

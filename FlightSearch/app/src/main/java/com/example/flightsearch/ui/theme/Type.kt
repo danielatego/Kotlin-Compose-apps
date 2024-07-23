@@ -8,7 +8,9 @@ import androidx.compose.ui.text.font.FontWeight
 import com.example.flightsearch.R
 
 val bodyFontFamily = FontFamily(
-    Font(R.font.inter_regular)
+    Font(R.font.inter_light, FontWeight.Light),
+    Font(R.font.inter_regular),
+    Font(R.font.inter_semi_bold, FontWeight.SemiBold),
 )
 val displayFontFamily = FontFamily(
     Font(R.font.inter_medium, FontWeight.Medium),
@@ -31,9 +33,9 @@ val AppTypography = Typography(
     titleMedium = baseline.titleMedium.copy(fontFamily = displayFontFamily, fontWeight = FontWeight.SemiBold),
     titleSmall = baseline.titleSmall.copy(fontFamily = displayFontFamily, fontWeight = FontWeight.Bold),
     bodyLarge = baseline.bodyLarge.copy(fontFamily = bodyFontFamily),
-    bodyMedium = baseline.bodyMedium.copy(fontFamily = bodyFontFamily),
+    bodyMedium = baseline.bodyMedium.copy(fontFamily = bodyFontFamily, fontWeight = FontWeight.Normal),
     bodySmall = baseline.bodySmall.copy(fontFamily = bodyFontFamily),
     labelLarge = baseline.labelLarge.copy(fontFamily = bodyFontFamily),
-    labelMedium = baseline.labelMedium.copy(fontFamily = bodyFontFamily),
+    labelMedium = baseline.labelMedium.copy(fontFamily = bodyFontFamily, fontWeight = FontWeight.SemiBold),
     labelSmall = baseline.labelSmall.copy(fontFamily = bodyFontFamily),
 )

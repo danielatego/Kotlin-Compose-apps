@@ -30,23 +30,34 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import com.example.flightsearch.R
+import com.example.flightsearch.data.Favorite
 
 
 @Composable
 fun FlightSearchScreen(
+    uiState: SearchUiState,
+    addFavorite: (Favorite)->Unit,
+    onSuggestionSelection:(String,String) -> Unit,
     modifier: Modifier=Modifier,
-    suggestionLists: List<SearchSuggestions>
+    onValueChange: (SearchUiState) -> Unit,
+    flightSearchUiState: FlightSearchUiState
 ) {
     Column(modifier = modifier.padding(dimensionResource(R.dimen.padding_medium))) {
-        TextField()
+        TextField(onValueChange = onValueChange, uiState = uiState)
         Spacer(modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_semi_large)))
         Column(modifier = Modifier){
             Text(text = "Flights from NBO",
                 modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_semi_large)),
                 style = MaterialTheme.typography.titleMedium
             )
+            when(flightSearchUiState){
+                is FlightSearchUiState.Searching ->ListOfSuggestions(
+                    searchSuggestionsList = flightSearchUiState.suggestions,
+                    suggestionOnClick =onSuggestionSelection)
+                is FlightSearchUiState.SearchResults -> ListOfFlights(listOfFlights = flightSearchUiState.SearchList,addFavorite=addFavorite)
+                is FlightSearchUiState.Favourites -> null
+            }
 
-            ListOfSuggestions(searchSuggestionsList = suggestionLists)
         }
     }
 
@@ -54,13 +65,17 @@ fun FlightSearchScreen(
 
 @Composable
 fun TextField(
+    uiState: SearchUiState,
+    onValueChange:(SearchUiState)->Unit,
     modifier: Modifier = Modifier
 ){
     OutlinedTextField(
         modifier = modifier
             .fillMaxWidth(),
-        value = "",
-        onValueChange = {},
+        value = uiState.editTextEntry,
+        onValueChange = {
+                       onValueChange(uiState.copy(editTextEntry = it))
+        },
         leadingIcon = {
             TextFieldIcons(
                 vectorResource = R.drawable.search,
@@ -132,6 +147,7 @@ fun SearchSuggestionItem(
 
 @Composable
 fun SearchResultItem(
+    flightTrip: FlightTrip,
     modifier: Modifier = Modifier,
     onSearchClick: ()->Unit ={}
 ){
@@ -156,10 +172,11 @@ fun SearchResultItem(
                 .fillMaxWidth()
 
         ) {
-            Column {
-              SearchResultTextColumn()
+            Column (modifier = Modifier.weight(5f)){
+              SearchResultTextColumn(flightTrip)
           }  
             Image(
+                modifier=Modifier.weight(1f),
                 imageVector = ImageVector.vectorResource(R.drawable.star),
                 contentDescription = stringResource(
                 R.string.favourite_icon
@@ -170,6 +187,7 @@ fun SearchResultItem(
 
 @Composable
 fun SearchResultTextColumn(
+    flightTrip: FlightTrip,
     modifier: Modifier = Modifier
 ){
     Column(
@@ -180,13 +198,13 @@ fun SearchResultTextColumn(
             style = MaterialTheme.typography.labelMedium)
         Row {
             Text(
-                text = "NBO",
+                text = flightTrip.departIata,
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(end = dimensionResource(R.dimen.small_padding))
             )
             Text(
-                text = "Nairobi International Airport",
+                text = flightTrip.departName,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onBackground,
             )
@@ -195,13 +213,13 @@ fun SearchResultTextColumn(
             style = MaterialTheme.typography.labelMedium)
         Row {
             Text(
-                text = "NBO",
+                text = flightTrip.arriveIata,
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(end = dimensionResource(R.dimen.small_padding))
             )
             Text(
-                text = "Nairobi International Airport",
+                text = flightTrip.arriveName,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onBackground,
             )
@@ -211,26 +229,39 @@ fun SearchResultTextColumn(
 
 @Composable
 fun ListOfSuggestions(
+    suggestionOnClick: (String,String)-> Unit,
     searchSuggestionsList: List<SearchSuggestions>
 ){
     LazyColumn(
+
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_very_small))
     ) {
        items(items = searchSuggestionsList, key = {suggestion -> suggestion.iataCode}){
-           SearchSuggestionItem(iataCode = it.iataCode, airport = it.airportName, suggestionOnClick = {})
+           SearchSuggestionItem(iataCode = it.iataCode, airport = it.airportName, suggestionOnClick = {suggestionOnClick(it.iataCode,it.airportName)})
        }
     }
 }
 @Composable
-fun ListOfFlights(modifier: Modifier=Modifier){
+fun ListOfFlights(
+    listOfFlights:List<FlightTrip>,
+    addFavorite: (Favorite) -> Unit,
+    modifier: Modifier=Modifier
+){
 
     LazyColumn(
         modifier =modifier,
         verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium))
     ) {
 
-        items(count =20){
-            SearchResultItem()
+        items(items = listOfFlights){
+            SearchResultItem(
+                onSearchClick = {addFavorite(Favorite(departure_code = it.departIata, destination_code = it.arriveIata))},
+                flightTrip = FlightTrip(
+                    departIata = it.departIata,
+                    departName = it.departName,
+                    arriveIata = it.arriveIata,
+                    arriveName = it.arriveName)
+            )
         }
     }
 }

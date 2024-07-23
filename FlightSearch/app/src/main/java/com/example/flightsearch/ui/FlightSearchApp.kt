@@ -10,12 +10,15 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flightsearch.R
 import com.example.flightsearch.ui.screens.FlightSearchScreen
+import com.example.flightsearch.ui.screens.FlightSearchUiState
 import com.example.flightsearch.ui.screens.FlightSearchViewModel
+import kotlinx.coroutines.launch
 
 @Composable
 fun FlightSearchApp(
@@ -27,8 +30,19 @@ fun FlightSearchApp(
         }
     ) {
         val flightSearchViewModel:FlightSearchViewModel = viewModel(factory = FlightSearchViewModel.Factory)
-        val flightSearchState =flightSearchViewModel.getListSearchSuggestions("op").collectAsState().value
-        FlightSearchScreen(modifier = Modifier.padding(it), suggestionLists = flightSearchState)
+        val flightSearchState by flightSearchViewModel.flightSearchUiState.collectAsState()
+        val editorUiState = flightSearchViewModel.searchUiState
+        val coroutine = rememberCoroutineScope()
+        FlightSearchScreen(
+            modifier = Modifier.padding(it),
+            addFavorite= { coroutine.launch {
+                flightSearchViewModel.addFavorite(it)
+            } },
+            onValueChange = flightSearchViewModel::updateSearchUiState,
+            onSuggestionSelection = flightSearchViewModel::updateUiStateToShowFlights,
+            uiState = editorUiState,
+            flightSearchUiState = flightSearchState
+        )
     }
 }
 
