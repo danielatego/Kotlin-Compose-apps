@@ -32,7 +32,7 @@ interface FlightsDao {
     @Query("SELECT * FROM airport " +
             "WHERE iata_code = :iata " +
             " LIMIT 1")
-    fun getAirportName(iata: String): Airport
+    fun getAirportName(iata: String): Flow<Airport>
 
     @Query("SELECT * FROM favorite")
     fun getAllFavourites(): Flow<List<Favorite>>

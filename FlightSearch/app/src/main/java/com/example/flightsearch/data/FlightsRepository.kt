@@ -19,7 +19,7 @@ interface FlightsRepository {
 
     // Get airport details from an IATA code
 
-    fun getAirportName(iata: String): Airport
+    fun getAirportName(iata: String): Flow<Airport>
 
     // Get a list of all your favorite trips
 

@@ -13,7 +13,7 @@ class OfflineFlightsRepository(private val flightsDao: FlightsDao): FlightsRepos
         return flightsDao.addFavourite(flight)
     }
 
-    override fun getAirportName(iata: String): Airport {
+    override fun getAirportName(iata: String): Flow<Airport> {
         return flightsDao.getAirportName(iata)
     }
 

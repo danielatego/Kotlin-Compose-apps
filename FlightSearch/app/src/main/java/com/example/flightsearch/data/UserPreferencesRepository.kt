@@ -28,11 +28,13 @@ class UserPreferencesRepository(
                 throw it
             }
         }.map { preference->
-            preference[LAST_SEARCH] ?: ""
+            preference[LAST_SEARCH] ?: "not"
+
         }
     suspend fun saveLastSearchedItem(lastSearchedItem:String){
         dataStore.edit {preferences->
             preferences[LAST_SEARCH]=lastSearchedItem
+            Log.d( "preference",lastSearchedItem)
         }
     }
 }

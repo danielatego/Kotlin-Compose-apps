@@ -23,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.dimensionResource
@@ -46,16 +47,15 @@ fun FlightSearchScreen(
         TextField(onValueChange = onValueChange, uiState = uiState)
         Spacer(modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_semi_large)))
         Column(modifier = Modifier){
-            Text(text = "Flights from NBO",
-                modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_semi_large)),
-                style = MaterialTheme.typography.titleMedium
-            )
+
             when(flightSearchUiState){
                 is FlightSearchUiState.Searching ->ListOfSuggestions(
                     searchSuggestionsList = flightSearchUiState.suggestions,
                     suggestionOnClick =onSuggestionSelection)
-                is FlightSearchUiState.SearchResults -> ListOfFlights(listOfFlights = flightSearchUiState.SearchList,addFavorite=addFavorite)
+                is FlightSearchUiState.SearchResults -> ListOfFlights(searchUiState = uiState,listOfFlights = flightSearchUiState.SearchList,addFavorite=addFavorite)
                 is FlightSearchUiState.Favourites -> ListOfFlights(
+                    searchUiState = uiState,
+                    favorites = true,
                     listOfFlights = flightSearchUiState.favourites,
                     addFavorite = {}
                 )
@@ -150,6 +150,7 @@ fun SearchSuggestionItem(
 
 @Composable
 fun SearchResultItem(
+    favorites: Boolean = false,
     flightTrip: FlightTrip,
     modifier: Modifier = Modifier,
     onSearchClick: ()->Unit ={}
@@ -180,6 +181,9 @@ fun SearchResultItem(
           }  
             Image(
                 modifier=Modifier.weight(1f),
+                colorFilter = if(favorites){
+                    ColorFilter.tint(Color(0xffd4af37))
+                }else ColorFilter.tint(Color(0xff000000)) ,
                 imageVector = ImageVector.vectorResource(R.drawable.star),
                 contentDescription = stringResource(
                 R.string.favourite_icon
@@ -246,25 +250,46 @@ fun ListOfSuggestions(
 }
 @Composable
 fun ListOfFlights(
+    searchUiState: SearchUiState,
+    favorites: Boolean = false,
     listOfFlights:List<FlightTrip>,
     addFavorite: (Favorite) -> Unit,
     modifier: Modifier=Modifier
 ){
 
-    LazyColumn(
-        modifier =modifier,
-        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium))
-    ) {
+    Column {
+        Text(text = if(!favorites){
+            stringResource(R.string.flights_from,searchUiState.editTextEntry)
+        }else{
+            stringResource(R.string.favourite_routes)} ,
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_semi_large)),
+            style = MaterialTheme.typography.titleMedium
+        )
+        LazyColumn(
+            modifier = modifier,
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_medium))
+        ) {
 
-        items(items = listOfFlights){
-            SearchResultItem(
-                onSearchClick = {addFavorite(Favorite(departure_code = it.departIata, destination_code = it.arriveIata))},
-                flightTrip = FlightTrip(
-                    departIata = it.departIata,
-                    departName = it.departName,
-                    arriveIata = it.arriveIata,
-                    arriveName = it.arriveName)
-            )
+            items(items = listOfFlights) {
+                SearchResultItem(
+                    favorites = favorites,
+                    onSearchClick = {
+                        addFavorite(
+                            Favorite(
+                                departure_code = it.departIata,
+                                destination_code = it.arriveIata
+                            )
+                        )
+                    },
+                    flightTrip = FlightTrip(
+                        departIata = it.departIata,
+                        departName = it.departName,
+                        arriveIata = it.arriveIata,
+                        arriveName = it.arriveName
+                    ),
+
+                    )
+            }
         }
     }
 }
