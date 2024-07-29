@@ -41,7 +41,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9daf5ad-b4ad-4ab1-9a1f-5a282a3d77b7" name="Changes" comment="" />
+    <list default="true" id="c9daf5ad-b4ad-4ab1-9a1f-5a282a3d77b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/java/com/example/juicetracker/ui/bottomsheet/ColorSpinnerRow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/java/com/example/juicetracker/ui/bottomsheet/RatingInputRow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/java/com/example/juicetracker/ui/homescreen/AdBanner.kt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JuiceTrackerC/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/java/com/example/juicetracker/ui/bottomsheet/EntryBottomSheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../JuiceTrackerC/app/src/main/java/com/example/juicetracker/ui/bottomsheet/EntryBottomSheet.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +100,10 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/daniel/AndroidStudioProjects/JuiceTrackerV"
+    "last_opened_file_path": "/home/daniel/AndroidStudioProjects/JuiceTrackerC",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager">
