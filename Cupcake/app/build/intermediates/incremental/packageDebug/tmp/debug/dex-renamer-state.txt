@@ -1,11 +1,11 @@
-#Wed Jul 03 05:14:37 EAT 2024
-base.0=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.4=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
-base.5=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.6=/home/daniel/AndroidStudioProjects/Cupcake/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Thu Aug 08 07:14:28 EAT 2024
+base.0=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.4=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
+base.5=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.6=/home/mahanaim-developers/AndroidStudioProjects/Kotlin-Compose-apps/Cupcake/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex
